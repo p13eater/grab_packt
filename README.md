@@ -32,3 +32,8 @@ Then add a scheduled task to execute run.bat daily at noon.
 	schtasks.exe /Create /SC DAILY /TN "Grab Packt Books" /TR "C:\Users\<USER_NAME>\Documents\GitHub\grab_packt\run.bat" /ST 12:00
 
 _Make sure you have a output file to write to_
+
+
+## Running with Docker
+
+`docker run -it --rm --env PACKT_EMAIL="PACKT_EMAIL" --env PACKT_PASSWORD="PACKT_PASSWORD" --name grab_packt craigmcmahon/grab_packt`
